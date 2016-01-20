@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Experiment with Bokeh</title>
+    <title>天玛云平台</title>
 
     <link
         href="http://cdn.pydata.org/bokeh/release/bokeh-0.10.0.min.css"
@@ -19,7 +19,19 @@
   {{the_div|safe}}
 
 
+  <form method=post action="">
+    {% csrf_token %}
+    黄陵矿303工作面数据查询。请输入日期：
+    <input id="r" name="r" type="text" value="2016-1-16">
+    <input type=submit value=提交>
 
+  </form>
+
+  <form action="blog/simple_chart" method="post">
+      <label for="your_name">Your name: </label>
+      <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+      <input type="submit" value="OK">
+  </form>
 
 
 </body>

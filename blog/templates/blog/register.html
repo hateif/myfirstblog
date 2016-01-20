@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title></title>
+
+    <link
+        href="http://cdn.pydata.org/bokeh/release/bokeh-0.10.0.min.css"
+        rel="stylesheet" type="text/css">
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.10.0.min.js"></script>
+
+
+    {{the_script|safe}}
+
+</head>
+  <body>
+    <h1>register</h1>
+        <form method="post" enctype="multipart/form-data" >
+            {% csrf_token %}
+                {{uf.as_p}}
+                {{teststr}}
+            <input type="submit" value="ok"/>
+        </form>
+
+        <form method="post" action=".." >
+            {% csrf_token %}
+            <input type="submit" value=分析 />
+        </form>
+
+
+          {{the_div|safe}}
+
+        <td valign="top">
+
+          {% if result != None %}
+            <h2>数据{{filename}}:</h2>
+
+              {{ result|safe }}
+
+          {% endif %}
+        </td>
+
+
+    </body>
+</html>
