@@ -19,9 +19,9 @@ Data from file <tt>%s</tt>:
 """ % (filename, np.mean(data), np.std(data))
 
 
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
-from matplotlib.dates import DateFormatter
+#from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+#from matplotlib.figure import Figure
+#from matplotlib.dates import DateFormatter
 from django.http import HttpResponse
 from bokeh.plotting import figure
 from bokeh.resources import CDN
