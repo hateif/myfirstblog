@@ -101,9 +101,9 @@ from .models import User
 from compute import computecsvfile
 
 import pandas as pd
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
-from matplotlib.dates import DateFormatter
+#from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+#from matplotlib.figure import Figure
+#from matplotlib.dates import DateFormatter
 
 # Create your views here.
 def register(request):
